@@ -20,6 +20,4 @@
 			<data android:mimeType="*/*" />
 		</intent>
 	</queries>
-	
-	<uses-sdk android:targetSdkVersion="4" />
 </manifest>
