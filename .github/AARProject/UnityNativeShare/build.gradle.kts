@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.unitynativeshare"
+    namespace = "com.yasirkula.unity"
     compileSdk = 34
 
     defaultConfig {
