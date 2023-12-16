@@ -196,6 +196,13 @@ public class NativeShare
 			intent.setAction( Intent.ACTION_SEND );
 		}
 
+		//Some targets (i.e. Telegram, Twitter) can't correctly handle gif mime type, contrary they can handle "application/binary" mime
+		//See https://bugs.telegram.org/c/18987 for more info
+		if (mime.toLowerCase().equals("image/gif"))
+		{
+			mime = "application/binary";
+		}
+
 		if( emailRecipients.size() > 0 )
 		{
 			String[] emailRecipientsArray = new String[emailRecipients.size()];
